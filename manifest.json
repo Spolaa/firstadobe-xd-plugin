@@ -1,0 +1,25 @@
+{
+    "name": "Quick Raleway",
+    "id": "00000000",
+    "version": "1.0.0",
+    "description": "Convert selected test to Raleway with Ra",
+    "icons": [
+        { 
+            "width": 96, 
+            "height": 96, 
+            "path": "images/icon.png" 
+        }
+    ],
+    "host": {
+        "app": "XD",
+        "minVersion": "13.0"
+    },
+    "uiEntryPoints": [
+        {
+            "type": "menu",
+            "label": "Quick Raleway",
+            "commandId": "quickRaleway",
+            "shortcut": { "mac": "Cmd+Alt+N", "win": "Ctrl+Alt+N" }
+        }
+    ]
+}
