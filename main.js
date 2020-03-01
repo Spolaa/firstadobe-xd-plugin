@@ -12,16 +12,29 @@
  */
 
 const commands = require("commands");
+const { Rectangle, Color } = require("scenegraph");
 
 function quickRaleway(selection) {
     console.log("Selection item:", selection.items);
 
+    // [3]
+    const newElement = new Rectangle();
+    newElement.width = 100;
+    newElement.height = 50;
+    newElement.fill = new Color("Purple");
+
+    // [4]
+    selection.insertionParent.addChild(newElement);
+    // [5]
+    newElement.moveInParentCoordinates(100, 100);
+
+    /*----------------TEST 1 - CHANGE FONT FAMILY---------------------*/
     // Set height items
     // Not work on text element
     // selection.items[0].width = 600;
     // selection.items[0].height = 600;
 
-    // If there is just one element
+    /* If there is just one element
     if(selection.items.length !== 0) {
         selection.items.forEach((node) => {
             node.styleRanges = [{
@@ -29,6 +42,7 @@ function quickRaleway(selection) {
             }];
         });
     }
+    */
 }
 
 module.exports = {
