@@ -14,7 +14,12 @@
 const commands = require("commands");
 
 function quickRaleway(selection) {
-    console.log(selection);
+    console.log("Selection item:", selection.items);
+
+    // Set height items
+    // Not work on text element
+    selection.items[0].width = 600;
+    selection.items[0].height = 600;
 }
 
 module.exports = {
